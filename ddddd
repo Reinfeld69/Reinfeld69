@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warranty Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 20px;
+            text-align: center;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #0077b6;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005f8a;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Verify Your Warranty</h1>
+        <p>Welcome to your extended warranty! Please verify your details and preferences below:</p>
+
+        <form id="warrantyForm">
+            <!-- Customer Details -->
+            <div class="form-group">
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" placeholder="example@email.com" required>
+            </div>
+
+            <!-- Marketing Opt-In Checkbox -->
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="marketingConsent">
+                    I agree to receive updates, tips, and promotions about Tadiran products.
+                </label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Verify and Confirm</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("warrantyForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const marketingOptIn = document.getElementById("marketingConsent").checked;
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+
+            // Simulate form submission
+            alert(`Thank you, ${name}! Your warranty is confirmed.\nMarketing Consent: ${marketingOptIn 
